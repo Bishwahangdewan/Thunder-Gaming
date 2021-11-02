@@ -7,7 +7,11 @@ const HomePage = () => (
         <div className="directory-menu">
             <div className="menu-item">
                 <div className="content">
-                    <h1 className="title">Top Games</h1>
+                    <h1 className="title">Latest Games</h1>
+                    <span className="subtitle">SHOP NOW</span>
+                </div>
+                <div className="content">
+                    <h1 className="title">Popular Games</h1>
                     <span className="subtitle">SHOP NOW</span>
                 </div>
             </div>

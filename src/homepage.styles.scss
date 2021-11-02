@@ -1,1 +1,18 @@
+.homepage{
+    width:95%;
+    margin:auto;
 
+    .menu-item{
+        display:flex;
+
+        .content{
+            text-align:center;
+            flex-grow: 1;
+            border:1px solid #666;
+            margin-right:20px;
+            padding :40px 0;
+            border-radius:5px;
+        }
+        
+    }
+}
