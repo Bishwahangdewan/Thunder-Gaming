@@ -9,6 +9,10 @@
     background-repeat: no-repeat;
     background-position: center;
 
+    &:hover{
+        cursor:pointer;
+    }
+
     .content{
         width:50%;
         margin:auto;
@@ -16,9 +20,21 @@
         border:1px solid #666;
         border-radius: 5px;
         padding:10px 0;
+        transition:0.3s;
+
+        &:hover{
+            background-color:rgb(255, 255, 255 ,0.1);
+            border:1px solid #fff;
+        }
 
         h1{
             padding-bottom:5px;
         }
+
+        .subtitle:hover{
+            color:#39ff14;
+            font-weight: 600;
+        }
     }
 }
+
