@@ -1,0 +1,19 @@
+.header{
+    width:95%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+
+    .logo{
+        width: 35%;
+        margin-top:-30px;
+    }
+
+    .options{
+        margin-top:30px;
+
+        .option{
+            margin-left:20px;
+        }
+    }
+}
