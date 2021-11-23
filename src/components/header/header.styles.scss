@@ -11,9 +11,11 @@
 
     .options{
         margin-top:30px;
+        display:flex;
 
         .option{
             margin-left:20px;
+            cursor:pointer;
         }
     }
 }

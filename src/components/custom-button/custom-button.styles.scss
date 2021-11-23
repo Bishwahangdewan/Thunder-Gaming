@@ -13,10 +13,22 @@
     font-weight: bolder;
     border: none;
     cursor: pointer;
+    transition:0.3s;
   
     &:hover {
       background-color: white;
       color: #333;
+    }
+
+    &.google-signin{
+      background-color: #EE027F;
+      color:#fff;
+      transition:0.3s;
+    }
+
+    &.google-signin:hover{
+      background-color: #fff;
+      color:#EE027F;
     }
 }
       
