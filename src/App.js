@@ -6,6 +6,10 @@ import Header from './components/header/header.component';
 import SignInAndSignUp from './pages/sign-in-and-sign-up-component/sign-in-and-sign-up.component';
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getDoc, doc } from 'firebase/firestore'
+
+import { createUserProfileDocument } from './firebase/firebase.util';
+import { Firestore } from '@firebase/firestore';
 
 class App extends React.Component {
   constructor() {
@@ -20,8 +24,20 @@ class App extends React.Component {
 
   componentDidMount() {
     const auth = getAuth();
-    this.unsubscribeFromAuth = onAuthStateChanged(auth, (user) => {
+    this.unsubscribeFromAuth = onAuthStateChanged(auth, async user => {
+
       if (user) {
+        const ref = await createUserProfileDocument(user);
+
+        const docSnap = await getDoc(ref);
+
+        this.setState({
+          currentUser: {
+            id: docSnap.id,
+            ...docSnap.data()
+          }
+        })
+      } else {
         this.setState({ currentUser: user })
       }
     })
