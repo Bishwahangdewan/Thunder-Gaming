@@ -41,10 +41,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
         } catch (err) {
             console.log(err.message);
         }
-    } else {
-        console.log("You have already signed in with this email");
     }
-
     return ref;
 
 }
