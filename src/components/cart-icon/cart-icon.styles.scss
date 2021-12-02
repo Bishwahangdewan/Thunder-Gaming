@@ -1,0 +1,32 @@
+.cart-icon{
+    position:relative;  
+    margin-left:20px;
+    display:flex;
+
+    .cart{
+        color:#02EE71;
+        font-weight:bold;
+        transition:0.3s;
+    }
+
+    .counter{
+        margin-left:5px;
+        padding:3px 6px;
+        background-color: #EE027F ;
+        border-radius: 50px;
+        font-family: sans-serif;
+        font-weight:bold;
+        font-size: 15px;
+        height:20px;
+    }
+
+    .counter:hover{
+        cursor: pointer;
+    }
+
+    .cart:hover{
+        color:#fff;
+        font-weight:bold;
+        cursor: pointer;
+    }
+}

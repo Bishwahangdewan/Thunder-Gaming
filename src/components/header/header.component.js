@@ -9,7 +9,10 @@ import './header.styles.scss';
 
 import { getAuth, signOut } from 'firebase/auth';
 
-const Header = ({ currentUser }) => {
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
+
+const Header = ({ currentUser, toggleHidden }) => {
 
     const auth = getAuth();
     console.log(currentUser)
@@ -25,13 +28,16 @@ const Header = ({ currentUser }) => {
                 {currentUser ?
                     <div className="option" onClick={() => signOut(auth)}>SIGN OUT</div> :
                     <Link className="option" to="/signin">SIGN IN</Link>}
+                <CartIcon />
+                {toggleHidden ? <CartDropdown /> : ''}
             </div>
         </div>
     )
 }
 
 const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    toggleHidden: state.cart.hidden
 })
 
 export default connect(mapStateToProps)(Header);
