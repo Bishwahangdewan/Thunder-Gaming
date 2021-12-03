@@ -5,8 +5,11 @@
     border:1px solid #02EE71;
     height:40%;
     padding:30px;
+    background-color: #222;
+    
 
     .cart-items{
         height:80%;
+        overflow: scroll;
     }
 }

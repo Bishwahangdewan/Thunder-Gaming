@@ -37,25 +37,25 @@ const shopData = [
         route: 'fantasy',
         items: [
             {
-                id: 1,
+                id: 5,
                 name: 'The Legend of Zelda',
                 imgUrl: "https://oceansofgamess.com/wp-content/uploads/2017/06/The-Legend-of-Zelda-Breath-of-the-Wild-Free-Download.jpg",
                 price: "500"
             },
             {
-                id: 2,
+                id: 6,
                 name: 'Final Fantasy XV',
                 imgUrl: "https://oceansofgamess.com/wp-content/uploads/2019/10/Final-Fantasy-XV-Windows-Edition-Episode-Ardyn-CODEX-Free-Download.jpg",
                 price: "500"
             },
             {
-                id: 3,
+                id: 7,
                 name: 'The Elder Scrolls V : Skyrim',
                 imgUrl: "https://oceansofgamess.com/wp-content/uploads/2017/05/The-Elder-Scrolls-V-Skyrim-Special-Edition-PC-Game-2016-Free-Download-768x1095.jpg",
                 price: "500"
             },
             {
-                id: 4,
+                id: 8,
                 name: 'ThroneBreaker',
                 imgUrl: "https://oceansofgamess.com/wp-content/uploads/2018/10/8ad695136c08bc4ebb229bb7ed8b29b05a00aab72400329f8bd3592c7e41682a_product_card_v2_mobile_slider_639.jpg",
                 price: "500"

@@ -1,0 +1,26 @@
+.cart-item{
+    display:flex;
+    justify-content: space-between;
+    height:100px;
+
+    .item-image{
+        height:80px;
+        width:80px;
+        
+
+        img{
+            width:100%;
+            border:2px solid #fff;
+        }
+    }
+
+    .itemname{
+        font-weight: 600;
+    }
+
+
+    .price{
+        color:#EE027F;
+        margin-top:5px;
+    }
+}
