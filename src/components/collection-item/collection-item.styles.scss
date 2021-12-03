@@ -1,11 +1,14 @@
 .collection-item{
+    box-sizing: border-box;
     border:1px solid #555;
     border-radius:3px;
     margin-bottom:3%;
+    padding:10px;
+    text-align: center;
 
     .image{
         height:200px;
-        width:280px;
+        width:250px;
         background-size:cover;
         background-position: center;
         background-repeat: no-repeat;
