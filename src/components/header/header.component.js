@@ -12,6 +12,10 @@ import { getAuth, signOut } from 'firebase/auth';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 
+import { createStructuredSelector } from 'reselect';
+import { selectCurrentUser } from '../../redux/user/user.selector';
+import { selectHidden } from '../../redux/cart/cart.selector';
+
 const Header = ({ currentUser, toggleHidden }) => {
 
     const auth = getAuth();
@@ -35,9 +39,11 @@ const Header = ({ currentUser, toggleHidden }) => {
     )
 }
 
-const mapStateToProps = state => ({
-    currentUser: state.user.currentUser,
-    toggleHidden: state.cart.hidden
+//if there are multiple selectors to pass then create structured selector does this and pushes the state down to each selectors
+
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    toggleHidden: selectHidden
 })
 
 export default connect(mapStateToProps)(Header);
