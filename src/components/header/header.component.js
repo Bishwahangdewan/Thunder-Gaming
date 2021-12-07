@@ -19,7 +19,6 @@ import { selectHidden } from '../../redux/cart/cart.selector';
 const Header = ({ currentUser, toggleHidden }) => {
 
     const auth = getAuth();
-    console.log(currentUser)
 
     return (
         <div className="header">

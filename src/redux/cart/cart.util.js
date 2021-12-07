@@ -11,3 +11,20 @@ export const addItem = (currentItems, newItem) => {
         return [...currentItems, { ...newItem, quantity: 1 }]
     }
 }
+
+
+export const reduceItem = (currentItems, itemToReduce) => {
+    //first check if current items contains the item to reduce .If it contains then add in a variable
+    const currentItem = currentItems.find(item => item.id === itemToReduce.id)
+
+    //check if the quantity is one . If the current item quantity is one then we need to remove the item
+    if (currentItem.quantity === 1) {
+        //remove item
+        return currentItems.filter(currentItem => currentItem.id !== itemToReduce.id)
+    }
+
+    //if quatity is more than one then just reduce
+    return currentItems.map(currentItem =>
+        currentItem.id === itemToReduce.id ? { ...currentItem, quantity: currentItem.quantity - 1 } : currentItem
+    )
+}

@@ -21,7 +21,7 @@ const CartDropdown = ({ cartItems, dispatch }) => {
     return (
         <div className="cart-dropdown">
             <div className="cart-items">
-                {cartItems.length ? cartItems.map(cartItem => <CartItem item={cartItem} />) :
+                {cartItems.length ? cartItems.map(cartItem => <CartItem key={cartItem.id} item={cartItem} />) :
                     <p>No items in the cart</p>
                 }
             </div>
