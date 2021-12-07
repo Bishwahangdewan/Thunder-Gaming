@@ -4,6 +4,7 @@ import ShopPage from './pages/shop/shop.component';
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Header from './components/header/header.component';
 import SignInAndSignUp from './pages/sign-in-and-sign-up-component/sign-in-and-sign-up.component';
+import Checkout from './components/check-out/checkout.component';
 
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { getDoc, doc } from 'firebase/firestore';
@@ -52,6 +53,7 @@ class App extends React.Component {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/shop" element={<ShopPage />} />
+          <Route path="/checkout" element={<Checkout />} />
           <Route path="/signin" element={this.props.currentUser ? <Navigate to="/" /> : <SignInAndSignUp />} />
         </Routes>
       </div>
