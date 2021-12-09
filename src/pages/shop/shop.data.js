@@ -1,5 +1,5 @@
-const shopData = [
-    {
+const shopData = {
+    action: {
         id: 1,
         title: 'Action Games',
         route: 'action',
@@ -31,7 +31,7 @@ const shopData = [
         ]
 
     },
-    {
+    fantasy: {
         id: 2,
         title: 'Fantasy Games',
         route: 'fantasy',
@@ -63,6 +63,6 @@ const shopData = [
         ]
 
     }
-];
+};
 
 export default shopData;
